@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Chatroom - PieSocket Channels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Background color split screen for large screens -->
+<div class="fixed top-0 left-0 w-1/2 h-full bg-white" aria-hidden="true"></div>
+<div class="fixed top-0 right-0 w-1/2 h-full bg-gray-50" aria-hidden="true"></div>
+<div class="relative min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="flex-shrink-0 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        
+        <div class="flex items-center px-2 lg:px-0 xl:w-64">
+          <div class="flex-shrink-0">
+            <img class="h-8 w-auto" src="http://websocket-v3.test/img/piesocket-text.png" alt="PieSocket">
+            <span class="text-sm ml-1 text-slate-400">Realtime Chatroom</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="lg:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3">
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-800">Dashboard</a>
+        <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Support</a>
+      </div>
+      <div class="pt-4 pb-3 border-t border-indigo-800">
+        <div class="px-2">
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Your Profile</a>
+          <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Settings</a>
+          <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Sign out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3 column wrapper -->
+  <div class="flex-grow w-full max-w-7xl mx-auto xl:px-8 lg:flex">
+    <!-- Left sidebar & main wrapper -->
+    <div class="flex-1 min-w-0 bg-white xl:flex">
+      <div class="border-b border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-64 xl:border-r xl:border-gray-200 bg-white">
+        <div class="h-full pl-4 pr-6 py-6 sm:pl-6 lg:pl-8 xl:pl-0">
+          <!-- Start left column area -->
+          <div class="h-full relative" style="min-height: 12rem;">
+            <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
+          </div>
+          <!-- End left column area -->
+        </div>
+      </div>
+
+      <div class="bg-white lg:min-w-0 lg:flex-1">
+        <div class="h-full py-6 px-4 sm:px-6 lg:px-8">
+          <!-- Start main area-->
+          <div class="relative h-full" style="min-height: 36rem;">
+            <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
+          </div>
+          <!-- End main area -->
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 pr-4 sm:pr-6 lg:pr-8 lg:flex-shrink-0 lg:border-l lg:border-gray-200 xl:pr-0">
+      <div class="h-full pl-6 py-6 lg:w-80">
+        <!-- Start right column area -->
+        <div class="h-full relative" style="min-height: 16rem;">
+          <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
+        </div>
+        <!-- End right column area -->
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
